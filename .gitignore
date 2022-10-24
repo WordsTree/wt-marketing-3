@@ -1,0 +1,7 @@
+vendor
+node_modules
+.idea
+.env
+
+# Local Netlify folder
+.netlify

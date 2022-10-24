@@ -1,0 +1,4 @@
+### MAIN DEFAULTS
+DirectoryIndex index.html index.htm index.php
+DefaultLanguage en-US
+AddDefaultCharset UTF-8

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>WordsTree</title>
+    <meta name="description" content="Knowledge management tool">
+    <meta name="keywords" content="documentation,notes,software,software development,programming,laravel,php" />
+    <link rel="canonical" href="https://wordstree.com/">
+
+    <link rel="icon" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_32/v1661432508/cropped-wordstree-logo_nmsujr.png" sizes="any" type="image/png">
+
+    <!-- android -->
+    <link rel="icon" sizes="192×192" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_192/v1661432508/cropped-wordstree-logo_nmsujr.png">
+    <link rel="icon" sizes="128×128" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_128/v1661432508/cropped-wordstree-logo_nmsujr.png">
+
+    <!-- apple : BEGIN -->
+    <link rel="apple-touch-icon" sizes="60×60" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_60/v1661432508/cropped-wordstree-logo_nmsujr.png">
+    <link rel="apple-touch-icon" sizes="76×76" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_76/v1661432508/cropped-wordstree-logo_nmsujr.png">
+    <link rel="apple-touch-icon" sizes="120×120" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_120/v1661432508/cropped-wordstree-logo_nmsujr.png">
+    <link rel="apple-touch-icon" sizes="152×152" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_152/v1661432508/cropped-wordstree-logo_nmsujr.png">
+    <link rel="apple-touch-icon" sizes="180×180" href="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_180/v1661432508/cropped-wordstree-logo_nmsujr.png">
+    <!-- apple : END -->
+
+    <!-- og - general : BEGIN -->
+    <meta name="og:title" property="og:title" content="WordsTree - Knowledge management tool">
+    <meta property="og:image" content="https://res.cloudinary.com/wordstree/image/upload/c_scale,w_1024/v1658782801/wordstree-logo_nmsujr.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <!-- og - general: END -->
+
+    <!-- og - twitter : BEGIN -->
+<!--    <meta name="twitter:card" content="summary" />-->
+<!--    <meta name="twitter:site" content="@nytimesbits" />-->
+<!--    <meta name="twitter:creator" content="@nickbilton" />-->
+<!--    <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />-->
+<!--    <meta property="og:title" content="A Twitter for My Sister" />-->
+<!--    <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />-->
+<!--    <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />-->
+    <!-- og - twitter : END -->
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/merriweather-2">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/open-sans">
+<!--    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">-->
+</head>
+<body>
+    <!-- Main -->
+    <div class="main-container bg-cover w-full h-screen"></div>
+
+    <div class="main-container-overlay-1 w-full h-screen flex flex-wrap content-center grid justify-items-stretch bg-opacity-30 absolute top-0 bg-transparent"></div>
+
+    <div id="main-window" class="w-full h-screen top-0 bg-transparent absolute text-center items-center justify-center flex sm:mx-0 p-4">
+
+        <div class="absolute bg-white border border-black text-center grid w-fit m-auto px-4 pb-14 sm:px-24 sm:pb-24 rounded-md">
+            <div class="mb-20 border-b border-black -mx-4 sm:-ml-24 sm:-mr-24 flex items-center flex-row">
+                <div class="w-14 sm:w-24 flex px-2 gap-2">
+                    <div class="rounded-full border border-black p-2"></div>
+                    <div class="rounded-full border border-black p-2"></div>
+                </div>
+                <div class="flex-grow">Welcome!</div>
+                <div class="w-14 sm:w-24">&nbsp;</div>
+            </div>
+
+            <img src="https://res.cloudinary.com/wordstree/image/upload/v1661432508/cropped-wordstree-logo_nmsujr.png" class="w-24 pb-4 place-self-center"/>
+            <h1 class="font-merriweather text-4xl md:text-7xl text-black justify-self-center px-8">WordsTree</h1>
+
+            <span class="text-black justify-self-center text-lg md:text-xl tracking-wide mt-2 px-8">Knowledge management tool</span>
+
+            <div class="justify-self-center flex flex-col md:flex-row mt-10 space-x-0 md:space-x-4">
+
+                <div class="group relative inline-flex border border-black focus:outline-none inline-flex lg:ml-4 w-40 mt-0 bg-black pb-0 h-12">
+                    <a href="https://app.wordstree.com" type="button" class="active:-translate-y-0 active:-translate-x-0 -translate-y-1.5 -translate-x-1.5 w-full flex items-center justify-center self-stretch text-white font-semibold text-center ring-1 ring-black ring-offset-0 ring-offset-transparent transform transition-transform px-2 py-2 pb-3 h-button-action wt-beta-tester-btn">
+                        Go!
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav -->
+    <input id="toggle" type="checkbox">
+    <div class="hidden wt-nav fixed top-0 flex justify-end">
+
+        <label class="toggle-container" for="toggle">
+            <span class="button button-toggle"></span>
+        </label>
+
+        <nav class="nav">
+            <a class="nav-item" href="">Home</a>
+            <a class="nav-item" href="#" target="_blank">Docs</a>
+            <a class="nav-item" href="">Blog</a>
+            <a class="nav-item" href="">Go to App</a>
+        </nav>
+    </div>
+
+    <!-- Features -->
+    <div class="features content-center py-20 px-4 md:px-40 text-white flex justify-center">
+        <div class="absolute w-full h-full hidden md:block">
+            <svg class="w-20 h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><g><g><path style="fill: #add8c6;" d="M36.51,27.54l1-.27a1.43,1.43,0,0,0,1.06-1.39v-1.7a1.44,1.44,0,0,0-1-1.4l-1-.29a1.46,1.46,0,0,1-1-.94,10.35,10.35,0,0,0-.63-1.5,1.47,1.47,0,0,1,0-1.38l.54-1A1.44,1.44,0,0,0,35.17,16L34,14.79a1.44,1.44,0,0,0-1.73-.24l-1.05.59a1.45,1.45,0,0,1-1.33,0h0a11.73,11.73,0,0,0-1.38-.56,1.45,1.45,0,0,1-.95-1l-.33-1.19a1.47,1.47,0,0,0-1.4-1.06H24.1a1.46,1.46,0,0,0-1.4,1.06l-.36,1.3a1.42,1.42,0,0,1-.92,1,11.75,11.75,0,0,0-1.22.52,1.48,1.48,0,0,1-1.36,0l-1.18-.68a1.45,1.45,0,0,0-1.74.24L14.72,16a1.44,1.44,0,0,0-.24,1.73l.69,1.22a1.46,1.46,0,0,1,0,1.35v0a11.61,11.61,0,0,0-.48,1.15,1.44,1.44,0,0,1-1,.92l-1.36.37a1.46,1.46,0,0,0-1.07,1.39v1.7a1.44,1.44,0,0,0,1.06,1.4l1.3.37a1.44,1.44,0,0,1,1,.94c.15.43.31.84.5,1.25a1.42,1.42,0,0,1,0,1.33l-.66,1.16A1.44,1.44,0,0,0,14.69,34l1.2,1.2a1.44,1.44,0,0,0,1.73.24l1.05-.59a1.43,1.43,0,0,1,1.36,0l.27.13a9.28,9.28,0,0,0,1.13.47,1.44,1.44,0,0,1,.91,1l.32,1.15a1.46,1.46,0,0,0,1.39,1.06h1.7a1.45,1.45,0,0,0,1.4-1.06l.29-1a1.44,1.44,0,0,1,1-1,11.76,11.76,0,0,0,1.52-.61,1.45,1.45,0,0,1,1.36,0l.91.52a1.47,1.47,0,0,0,1.74-.23l1.2-1.2a1.45,1.45,0,0,0,.24-1.74l-.49-.87a1.45,1.45,0,0,1,0-1.37,1.51,1.51,0,0,0,.11-.22,11.24,11.24,0,0,0,.55-1.35A1.45,1.45,0,0,1,36.51,27.54Zm-16.74-5a5.81,5.81,0,1,1,2.7,7.76,5.8,5.8,0,0,1-2.7-7.76h0Z"/><path d="M25.76,39.62H24.05a2.46,2.46,0,0,1-2.35-1.8l-.32-1.14a.47.47,0,0,0-.28-.3c-.42-.15-.84-.33-1.24-.52l-.29-.14a.41.41,0,0,0-.4,0l-1.06.59a2.45,2.45,0,0,1-2.93-.4L14,34.72a2.45,2.45,0,0,1-.4-2.94l.66-1.16a.43.43,0,0,0,0-.41,11.31,11.31,0,0,1-.54-1.36.46.46,0,0,0-.31-.3l-1.3-.36a2.47,2.47,0,0,1-1.79-2.37v-1.7a2.46,2.46,0,0,1,1.8-2.35l1.36-.38a.44.44,0,0,0,.3-.28,10.6,10.6,0,0,1,.52-1.25.47.47,0,0,0,0-.46l-.68-1.22a2.45,2.45,0,0,1,.4-2.93l1.2-1.2a2.45,2.45,0,0,1,2.94-.4l1.19.68a.45.45,0,0,0,.42,0,11.28,11.28,0,0,1,1.33-.56.46.46,0,0,0,.29-.3l.36-1.3a2.46,2.46,0,0,1,2.36-1.79h1.7a2.46,2.46,0,0,1,2.36,1.8l.33,1.19a.43.43,0,0,0,.3.3,12.53,12.53,0,0,1,1.51.61.41.41,0,0,0,.4,0l1.05-.58a2.45,2.45,0,0,1,2.93.4l1.2,1.2a2.47,2.47,0,0,1,.4,2.94l-.54.94a.47.47,0,0,0,0,.43,12.38,12.38,0,0,1,.69,1.64.46.46,0,0,0,.31.3l1,.28a2.45,2.45,0,0,1,1.79,2.37v1.7a2.45,2.45,0,0,1-1.79,2.35l-1,.27a.46.46,0,0,0-.31.3,11.31,11.31,0,0,1-.6,1.49l-.1.19a.49.49,0,0,0,0,.47l.49.87a2.44,2.44,0,0,1-.41,2.93L34.65,36a2.45,2.45,0,0,1-2.94.4l-.92-.52a.48.48,0,0,0-.42,0,10.87,10.87,0,0,1-1.66.67.48.48,0,0,0-.31.31l-.29,1A2.45,2.45,0,0,1,25.76,39.62Zm-6.38-5.95a2.42,2.42,0,0,1,1.11.27l.24.12a10.19,10.19,0,0,0,1,.43,2.46,2.46,0,0,1,1.55,1.65l.31,1.15a.46.46,0,0,0,.43.33h1.7a.46.46,0,0,0,.44-.33l.29-1a2.45,2.45,0,0,1,1.63-1.68A8.52,8.52,0,0,0,29.48,34a2.46,2.46,0,0,1,2.3.06l.92.52a.44.44,0,0,0,.53-.07l1.2-1.2a.44.44,0,0,0,.08-.54L34,31.93A2.45,2.45,0,0,1,34,29.61l.1-.19a9.45,9.45,0,0,0,.5-1.24,2.47,2.47,0,0,1,1.67-1.61h0l1-.26a.45.45,0,0,0,.32-.43v-1.7a.44.44,0,0,0-.32-.44l-1-.28a2.48,2.48,0,0,1-1.67-1.59A8.51,8.51,0,0,0,34,20.51a2.47,2.47,0,0,1,0-2.33l.54-.95a.44.44,0,0,0-.08-.54l-1.19-1.2a.46.46,0,0,0-.54-.07l-1,.59a2.45,2.45,0,0,1-2.25.07q-.62-.28-1.26-.51a2.46,2.46,0,0,1-1.61-1.66l-.33-1.2a.45.45,0,0,0-.43-.33H24.1a.45.45,0,0,0-.43.33L23.3,14a2.46,2.46,0,0,1-1.55,1.65,9.78,9.78,0,0,0-1.1.46,2.43,2.43,0,0,1-2.3-.05l-1.19-.68a.46.46,0,0,0-.54.07l-1.19,1.2a.44.44,0,0,0-.08.54L16,18.42a2.45,2.45,0,0,1,.06,2.28,10.52,10.52,0,0,0-.44,1.07A2.48,2.48,0,0,1,14,23.32l-1.36.38a.45.45,0,0,0-.33.43v1.69a.45.45,0,0,0,.33.44l1.3.37a2.43,2.43,0,0,1,1.66,1.59,9.92,9.92,0,0,0,.46,1.13A2.47,2.47,0,0,1,16,31.61l-.66,1.16a.46.46,0,0,0,.07.54l1.2,1.19a.44.44,0,0,0,.54.08L18.18,34A2.45,2.45,0,0,1,19.38,33.67ZM25,31.88a6.81,6.81,0,0,1-6.13-9.77l.05-.11A6.81,6.81,0,1,1,25,31.88Zm-4.37-8.82a4.81,4.81,0,1,0,8.92.43,4.75,4.75,0,0,0-2.45-2.75A4.8,4.8,0,0,0,20.67,23Z"/></g></g></svg>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 gap-y-10 max-w-7xl">
+            <h3 class="feature-item feature-run-code text-4xl font-merriweather self-end mr-10">Run Code</h3>
+            <span class="self-center pb-1 text-lg">Run Laravel scripts directly from the document that you’re working on.</span>
+
+            <h3 class="feature-item feature-markdown text-4xl font-merriweather self-end mr-10">Markdown</h3>
+            <span class="self-center pb-1 text-lg">Plain text editor that makes writing and reading a breeze.</span>
+
+            <h3 class="feature-item feature-directories text-4xl font-merriweather self-end mr-10">Teams</h3>
+            <span class="self-center pb-1 text-lg">Organize documents in directories and share them with your teammates.</span>
+        </div>
+    </div>
+
+    <!-- Examples -->
+    <div class="gifs content-center py-32 px-4 md:px-10 text-black grid gap-y-8 grid-cols-1">
+        <div class="w-full flex flex-col justify-center">
+            <h3 class="w-full max-w-screen-lg text-center text-3xl mb-8 self-center">Execute Scripts</h3>
+            <img class="card-2 w-full max-w-screen-md self-center" src="https://res.cloudinary.com/wordstree/image/upload/v1661488014/design/example-1.2_gpm6fx.png" />
+        </div>
+
+        <div class="w-full flex flex-col justify-center mt-28">
+            <h3 class="w-full max-w-screen-lg text-center text-3xl mb-8 self-center">Write awesome Documents</h3>
+            <img class="card-2 w-full max-w-screen-md self-center" src="https://res.cloudinary.com/wordstree/image/upload/v1661385240/design/example-2.1_dwinay.png" />
+        </div>
+
+        <div class="w-full flex flex-col justify-center mt-28">
+            <h3 class="w-full max-w-screen-lg text-center text-3xl mb-8 self-center">Organize</h3>
+            <img class="card-2 w-full max-w-screen-md self-center" src="https://res.cloudinary.com/wordstree/image/upload/v1661487638/design/Screenshot_from_2022-08-24_17-26-47_aburbe.png" />
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about content-center pt-20 pb-16 px-4 md:px-10 text-black flex flex-col justify-center text-white">
+        <h2 class="text-4xl font-merriweather text-center mb-10">About WordsTree</h2>
+
+        <p class="text-base max-w-screen-lg self-center text-center">We created WordsTree with <strong>Developers</strong> in mind. The functionality we provide is like a toolbox: you’ll get everything you need to manage knowledge in one place. Write effective documents, share them with co-workers, run codes, and keep them organized and easily accessible. We’ve got your back!</p>
+
+        <div class="w-full flex justify-center mt-16">
+            <div class="group relative inline-flex border border-black focus:outline-none inline-flex lg:ml-4 w-40 mt-0 bg-black pb-0 h-12">
+                <a href="https://app.wordstree.com" type="button" class="active:-translate-y-0 active:-translate-x-0 -translate-y-1.5 -translate-x-1.5 w-full flex items-center justify-center self-stretch text-white font-semibold text-center ring-1 ring-black ring-offset-0 ring-offset-transparent transform transition-transform px-2 py-2 pb-3 h-button-action wt-beta-tester-btn">
+                    Go!
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer content-center pt-10 pb-2 px-4 md:px-10 text-black">
+
+        <div class="max-w-7xl justify-center grid grid-cols-1 md:grid-cols-2 gap-y-6 m-auto">
+
+            <div class="text-left">
+                <div>Get in Touch!</div>
+                <div><a class="font-bold underline" href="#">hello@wordstree.com</a></div>
+            </div>
+
+            <div class="text-left md:text-right grid grid-cols-1">
+                <div>Follow Us</div>
+                <div class="grid grid-cols-2 w-10 justify-self-start md:justify-self-end">
+                    <a class="block place-self-start mt-1" href="#"><i class="block fab fa-twitter justify-self-end"></i></a>
+                    <a class="block place-self-end" href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="back-top" class="fixed hidden group inline-flex border border-black focus:outline-none inline-flex lg:ml-4 mt-0 bg-black pb-0 h-12 bottom-20 right-10">
+            <a class="btn-back-top active:-translate-y-0 active:-translate-x-0 -translate-y-1.5 -translate-x-1.5 w-full flex items-center justify-center self-stretch text-white font-semibold text-center ring-1 ring-black ring-offset-0 ring-offset-transparent transform transition-transform px-2 py-2 pb-3 cursor-pointer">
+                <svg class="w-10 h-10 rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><g><path d="M25,31.14a1.47,1.47,0,0,1-1.09-.48l-9.19-9.74,2.18-2.06L25,27.45l8.1-8.59,2.18,2.06-9.19,9.74A1.47,1.47,0,0,1,25,31.14Z"/></g></svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="/public/js/script.js"></script>
+</body>
+</html>
