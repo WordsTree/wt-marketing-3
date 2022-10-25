@@ -3077,24 +3077,16 @@ document.addEventListener('alpine:init', function () {
   //     },
   // }));
 });
-function startBackToTop() {
-  // get the element to animate
+
+// animate element when it is in view
+function toggleBackToTop() {
   var backToTop = document.getElementById('back-top');
-  var element = document.getElementById('main-window');
-  var elementHeight = element.clientHeight;
 
-  // listen for scroll event and call animate function
-  document.addEventListener('scroll', toggleBackToTop);
-  document.querySelector('#back-top a').addEventListener('click', function (e) {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  });
+  // is element in view?
+  if (function () {
+    var element = document.getElementById('main-window');
+    var elementHeight = element.clientHeight;
 
-  // check if element is in view
-  function inView() {
     // get window height
     var windowHeight = window.innerHeight;
     // get number of pixels that the document is scrolled
@@ -3106,32 +3098,45 @@ function startBackToTop() {
     var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
 
     // is scroll position greater than element position? (is element in view?)
-    if (scrollPosition > elementPosition) {
-      return true;
-    }
-    return false;
+    return scrollPosition > elementPosition;
+  }()) {
+    // element is in view, add class to element
+    backToTop.classList.add('block');
+    backToTop.classList.remove('hidden');
+    return;
   }
-
-  // animate element when it is in view
-  function toggleBackToTop() {
-    // is element in view?
-    if (inView()) {
-      // element is in view, add class to element
-      backToTop.classList.add('block');
-      backToTop.classList.remove('hidden');
-      return;
-    }
-    backToTop.classList.remove('block');
-    backToTop.classList.add('hidden');
-  }
+  backToTop.classList.remove('block');
+  backToTop.classList.add('hidden');
 }
 document.addEventListener('DOMContentLoaded', function (event) {
   alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
-  startBackToTop();
 
   // fix for the mobile screen size
   // let vh = window.innerHeight * 0.01;
   // document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  // initilization events
+  setTimeout(function () {
+    document.getElementById('main-window').classList.remove('skew-y-0');
+    document.getElementById('main-window').classList.add('skew-y-3', 'drop-shadow-xl');
+  }, 500);
+
+  // scroll based events
+  window.addEventListener('scroll', function (event) {
+    toggleBackToTop();
+
+    // down-arrow
+    var downArrow = document.getElementById('down-arrow');
+    if (0 === window.scrollY) {
+      if (downArrow.classList.contains('hidden')) {
+        downArrow.classList.remove('hidden');
+      }
+    } else {
+      if (!downArrow.classList.contains('hidden')) {
+        downArrow.classList.add('hidden');
+      }
+    }
+  });
 });
 
 /***/ }),

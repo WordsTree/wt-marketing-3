@@ -55,7 +55,14 @@
 
     <div class="main-container-overlay-1 w-full h-screen flex flex-wrap content-center grid justify-items-stretch bg-opacity-30 absolute top-0 bg-transparent"></div>
 
-    <div id="main-window" class="w-full h-screen top-0 bg-transparent absolute text-center items-center justify-center flex sm:mx-0 p-4">
+    <!-- Pinging down-arrow -->
+    <div id="down-arrow" class="bottom-0 fixed w-full flex justify-center h-10">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 animate-bounce rounded-full border border-black p-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+        </svg>
+    </div>
+
+    <div id="main-window" class="w-full h-screen top-0 bg-transparent absolute text-center items-center justify-center flex sm:mx-0 p-4 skew-y-12">
 
         <div class="absolute bg-white border border-black text-center grid w-fit m-auto px-4 pb-14 sm:px-24 sm:pb-24 rounded-md">
             <div class="mb-20 border-b border-black -mx-4 sm:-ml-24 sm:-mr-24 flex items-center flex-row">
@@ -170,7 +177,7 @@
             </div>
         </div>
 
-        <div id="back-top" class="fixed hidden group inline-flex border border-black focus:outline-none inline-flex lg:ml-4 mt-0 bg-black pb-0 h-12 bottom-20 right-10">
+        <div id="back-top" class="fixed hidden group inline-flex border border-black focus:outline-none inline-flex lg:ml-4 mt-0 bg-black pb-0 h-12 bottom-20 right-10 cursor-pointer" onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
             <a class="btn-back-top active:-translate-y-0 active:-translate-x-0 -translate-y-1.5 -translate-x-1.5 w-full flex items-center justify-center self-stretch text-white font-semibold text-center ring-1 ring-black ring-offset-0 ring-offset-transparent transform transition-transform px-2 py-2 pb-3 cursor-pointer">
                 <svg class="w-10 h-10 rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><g><path d="M25,31.14a1.47,1.47,0,0,1-1.09-.48l-9.19-9.74,2.18-2.06L25,27.45l8.1-8.59,2.18,2.06-9.19,9.74A1.47,1.47,0,0,1,25,31.14Z"/></g></svg>
             </a>
