@@ -3117,8 +3117,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   // initilization events
   setTimeout(function () {
-    document.getElementById('main-window').classList.remove('skew-y-0');
-    document.getElementById('main-window').classList.add('skew-y-3', 'drop-shadow-xl');
+    // document.getElementById('main-window').classList.remove('skew-y-0');
+    // document.getElementById('main-window').classList.add('skew-y-3', 'drop-shadow-xl');
   }, 500);
 
   // scroll based events
